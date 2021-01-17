@@ -1,0 +1,53 @@
+group 'com.jaylin.ali_real_person'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api (name:'rpsdk-4.5.0-open', ext:'aar')
+    api (name:'oss-android-sdk-2.9.2', ext:'aar')
+    api (name:'SecurityBodySDK-external-release-5.5.19', ext:'aar')
+    api (name:'SecurityGuardSDK-external-release-5.5.14240408', ext:'aar')
+    api (name:'MiddleTierSDK-external-release-5.5.13874142', ext:'aar')
+    api (name:'windvane', ext:'aar')
+
+}
