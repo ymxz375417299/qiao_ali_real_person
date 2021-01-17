@@ -1,3 +1,14 @@
+---
+title: flutter 阿里云实人认证
+tags: 
+- flutter
+categories:
+- 项目笔记
+---
+
+
+
+
 
 > 前言
 >
@@ -11,7 +22,7 @@
 
 2. 如果灰色则点击开通
 
-   ![image-20210115180523132](/Users/rock/Library/Application Support/typora-user-images/image-20210115180523132.png)
+   ![image-20210115180523132](http://alimd.haloit.top/img/20210117232534.png)
 
 1. 新建场景-活体人脸认证
 
@@ -33,7 +44,7 @@
 
 下载本插件，并复制到您的项目中。本次则复制到`/lib/plugins`为例，进行说明
 
-![image-20210117224204709](/Users/rock/Library/Application Support/typora-user-images/image-20210117224204709.png)
+![image-20210117224204709](http://alimd.haloit.top/img/20210117232641.png)
 
 #### 添加依赖
 
@@ -55,9 +66,9 @@
 - 设置插件的lib文件
 
 ```json
-android {
+android { 
 	...省略
-
+	
     repositories {
         flatDir {
             // 导入 阿里云插件的lib目录
@@ -115,13 +126,13 @@ android {
 
 直接用鼠标把资源文件拖动到Runner下即可
 
-![image-20210115233550528](/Users/rock/Library/Application Support/typora-user-images/image-20210115233550528.png)
+![image-20210115233550528](http://alimd.haloit.top/img/20210117232814.png)
 
 ![image-20210115175120113](http://alimd.haloit.top/img/20210115175120.png)
 
  导入完成后，您可以在`Build Phases > Copy Bundle Resources`看到资源文件。如果未看到资源文件，则说明导入过程中出现问题，请确认将所有资源文件拷贝到工程项目，并勾选正确应用目标。
 
-![image-20210115233507169](/Users/rock/Library/Application Support/typora-user-images/image-20210115233507169.png)
+![image-20210115233507169](http://alimd.haloit.top/img/20210117232916.png)
 
 
 
@@ -141,7 +152,7 @@ platform :ios, '9.0'
 
 例： `org.cocoapods.ali-real-person` 修改为 `you_project_buildid.ali-real-person`
 
-![image-20210117225157065](/Users/rock/Library/Application Support/typora-user-images/image-20210117225157065.png)
+![image-20210117225157065](http://alimd.haloit.top/img/20210117232735.png)
 
 
 
@@ -151,7 +162,7 @@ platform :ios, '9.0'
 
 ![image-20210115174747835](http://alimd.haloit.top/img/20210115174748.png)
 
-okhttp有可能和其他插件产生依赖冲突
+okhttp有可能和其他插件产生依赖冲突 
 
 > 具体原因： 一个是jar包，一个是maven依赖，导致冲突了，所以要把jar包的删掉
 
@@ -164,7 +175,7 @@ okio-1.16.0.jar
 
 然后，清除`clean flutter`再运行【必须】
 
-![image-20210116133212690](/Users/rock/Library/Application Support/typora-user-images/image-20210116133212690.png)
+![image-20210116133212690](http://alimd.haloit.top/img/20210117232842.png)
 
 
 
@@ -244,10 +255,5 @@ class _MyAppState extends State<MyApp> {
 }
 
 ```
-
-
-
-
-
 
 
